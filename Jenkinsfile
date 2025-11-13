@@ -8,7 +8,8 @@ pipeline {
     }
     stage('Test') {
       steps {
-       echo "Run tests" 
+       sh 'chmod a+x run_build_script.sh'
+       sh './run_build_script.sh'
       }
     }
   }
